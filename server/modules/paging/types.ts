@@ -4,7 +4,6 @@ import { Album,
     Artist,
     Artist_Simple,
     Category,
-    Paging,
     Track,
     Track_Simple
 } from '..';
