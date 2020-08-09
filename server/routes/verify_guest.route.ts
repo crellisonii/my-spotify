@@ -6,7 +6,6 @@ import { getToken } from '../services';
 
 
 export const verifyGuestRoute = (req: Request, res: Response) => {
-    // const { token } = req.body;
     const { token } = req.query;
     isTokenValid(`${token}`) ? res.json({ token }) : getNewToken(res);
 };

@@ -11,7 +11,7 @@ export const verifyUserRoute = (req: Request, res: Response) => {
 
   const refreshToken = (res: Response, tokenString: string) => {
     const { refresh } = decodePayload(tokenString)!;
-    getRefreshToken(res, refresh);
+    getRefreshToken(res, refresh!);
   };
 
   const getRefreshToken = (res: Response, refresh: string) => {

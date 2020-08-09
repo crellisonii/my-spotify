@@ -10,8 +10,8 @@ export const login = (res: Response, params: AuthorizeParams): void => {
     const url = authorizeUrl;
     const queryParams = qs.stringify(params);
     res.redirect(`${url}?${queryParams}`);
-  };
-  
-  export const getToken = (params: AuthorizationOptions): RequestPromise<Token> => {
+};
+
+export const getToken = (params: AuthorizationOptions): RequestPromise<Token> => {
     return request(params);
-  };
+};
