@@ -25,8 +25,6 @@ let port = server_port || 4000;
 
 async function bootstrap() {
 
-    console.log('bootstrap called!');
-
     const schema = await buildSchema({
         resolvers: [
             AlbumResolver,
