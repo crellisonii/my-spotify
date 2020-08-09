@@ -1,6 +1,7 @@
 import { Arg, Ctx, Query, Resolver } from "type-graphql";
 import { Artist, ArtistInput, Artist_Object, TopTracksInput } from ".";
-import { Paging_Albums_Simple, PagingInput, Track_Object } from "..";
+import { Paging_Albums_Simple, PagingInput } from "../paging";
+import { Track_Object } from '../track';
 import request from 'request-promise';
 import { baseUrl } from '../../constants';
 import { GraphQLContext } from "../../interfaces";

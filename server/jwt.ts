@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 
 export const signToken = (payload: TokenBody, expiresIn?: number): string => {
     const token = expiresIn
-        ? jwt.sign(payload, jwt_secret!, { expiresIn: 60 })
+        ? jwt.sign(payload, jwt_secret!, { expiresIn })
         : jwt.sign(payload, jwt_secret!);
     return token;
 };

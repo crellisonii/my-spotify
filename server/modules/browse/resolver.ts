@@ -1,5 +1,7 @@
 import { Arg, Ctx, Query, Resolver } from "type-graphql";
-import { Albums_Simple_Paged, Categories_Paged, Category, PagingInput} from '..';
+import { Albums_Simple_Paged } from '../album'
+import { Categories_Paged, Category} from '../category';
+import { PagingInput } from '../paging';
 import request from 'request-promise';
 import { baseUrl } from '../../constants';
 import { GraphQLContext } from "../../interfaces";

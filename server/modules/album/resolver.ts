@@ -1,6 +1,6 @@
 import { Arg, Ctx, Query, Resolver } from "type-graphql";
 import { Album, AlbumInput, Albums } from ".";
-import { PagingInput, Paging_Tracks_Simple } from "..";
+import { PagingInput, Paging_Tracks_Simple } from "../paging";
 import request from 'request-promise';
 import { baseUrl } from '../../constants';
 import { GraphQLContext } from "../../interfaces";
@@ -40,7 +40,7 @@ export class AlbumResolver {
   async getAlbumTracks(
     @Ctx() context: GraphQLContext,
     @Arg("albumInput") input: AlbumInput,
-    @Arg('paging') paging: PagingInput
+    @Arg('pagingInput') paging: PagingInput
   ): Promise<Paging_Tracks_Simple> {
     try {
       console.log("Album input: ", input);
